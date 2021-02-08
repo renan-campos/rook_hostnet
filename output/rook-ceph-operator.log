@@ -1,0 +1,125 @@
+2021-02-08 21:25:52.541761 I | rookcmd: starting Rook v1.5.0-alpha.0.446.g09b72e4 with arguments '/usr/local/bin/rook ceph operator'
+2021-02-08 21:25:52.541842 I | rookcmd: flag values: --add_dir_header=false, --alsologtostderr=false, --csi-cephfs-plugin-template-path=/etc/ceph-csi/cephfs/csi-cephfsplugin.yaml, --csi-cephfs-provisioner-dep-template-path=/etc/ceph-csi/cephfs/csi-cephfsplugin-provisioner-dep.yaml, --csi-rbd-plugin-template-path=/etc/ceph-csi/rbd/csi-rbdplugin.yaml, --csi-rbd-provisioner-dep-template-path=/etc/ceph-csi/rbd/csi-rbdplugin-provisioner-dep.yaml, --enable-discovery-daemon=false, --enable-flex-driver=false, --enable-machine-disruption-budget=false, --help=false, --kubeconfig=, --log-flush-frequency=5s, --log-level=INFO, --log_backtrace_at=:0, --log_dir=, --log_file=, --log_file_max_size=1800, --logtostderr=true, --mon-healthcheck-interval=45s, --mon-out-timeout=10m0s, --one_output=false, --operator-image=, --service-account=, --skip_headers=false, --skip_log_headers=false, --stderrthreshold=2, --v=0, --vmodule=
+2021-02-08 21:25:52.541846 I | cephcmd: starting Rook-Ceph operator
+2021-02-08 21:25:52.657009 I | cephcmd: base ceph version inside the rook operator image is "ceph version 15.2.8 (bdf3eebcd22d7d0b3dd4d5501bee5bac354d5b55) octopus (stable)"
+2021-02-08 21:25:52.666249 I | operator: looking for secret "rook-ceph-admission-controller"
+2021-02-08 21:25:52.670655 I | operator: secret "rook-ceph-admission-controller" not found. proceeding without the admission controller
+2021-02-08 21:25:52.671793 I | operator: watching all namespaces for ceph cluster CRs
+2021-02-08 21:25:52.671864 I | operator: setting up the controller-runtime manager
+2021-02-08 21:25:52.674027 I | ceph-cluster-controller: ConfigMap "rook-ceph-operator-config" changes detected. Updating configurations
+I0208 21:25:53.722249       7 request.go:655] Throttling request took 1.046813412s, request: GET:https://172.30.0.1:443/apis/autoscaling/v2beta2?timeout=32s
+2021-02-08 21:25:55.080120 I | ceph-cluster-controller: successfully started
+2021-02-08 21:25:55.080188 I | ceph-cluster-controller: enabling hotplug orchestration
+2021-02-08 21:25:55.080218 I | ceph-crashcollector-controller: successfully started
+2021-02-08 21:25:55.080269 I | ceph-block-pool-controller: successfully started
+2021-02-08 21:25:55.080306 I | ceph-object-store-user-controller: successfully started
+2021-02-08 21:25:55.080344 I | ceph-object-realm-controller: successfully started
+2021-02-08 21:25:55.080379 I | ceph-object-zonegroup-controller: successfully started
+2021-02-08 21:25:55.080415 I | ceph-object-zone-controller: successfully started
+2021-02-08 21:25:55.080507 I | ceph-object-controller: successfully started
+2021-02-08 21:25:55.080558 I | ceph-file-controller: successfully started
+2021-02-08 21:25:55.080617 I | ceph-nfs-controller: successfully started
+2021-02-08 21:25:55.080661 I | ceph-rbd-mirror-controller: successfully started
+2021-02-08 21:25:55.080705 I | ceph-client-controller: successfully started
+2021-02-08 21:25:55.080742 I | ceph-filesystem-mirror-controller: successfully started
+2021-02-08 21:25:55.080798 I | operator: starting the controller-runtime manager
+2021-02-08 21:30:01.352875 I | clusterdisruption-controller: create event from ceph cluster CR
+2021-02-08 21:30:01.352964 I | ceph-spec: adding finalizer "cephcluster.ceph.rook.io" on "rook-ceph"
+2021-02-08 21:30:01.372554 I | ceph-cluster-controller: reconciling ceph cluster in namespace "rook-ceph"
+2021-02-08 21:30:01.376561 I | op-k8sutil: ROOK_CSI_ENABLE_RBD="true" (configmap)
+2021-02-08 21:30:01.379700 I | op-k8sutil: ROOK_CSI_ENABLE_CEPHFS="true" (configmap)
+2021-02-08 21:30:01.386667 I | op-k8sutil: ROOK_CSI_ALLOW_UNSUPPORTED_VERSION="false" (configmap)
+2021-02-08 21:30:01.390733 I | op-k8sutil: ROOK_CSI_ENABLE_GRPC_METRICS="true" (configmap)
+2021-02-08 21:30:01.393628 I | op-k8sutil: ROOK_CSI_CEPH_IMAGE="quay.io/cephcsi/cephcsi:v3.2.0" (default)
+2021-02-08 21:30:01.396331 I | op-k8sutil: ROOK_CSI_REGISTRAR_IMAGE="k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.0.1" (default)
+2021-02-08 21:30:01.400272 I | op-k8sutil: ROOK_CSI_PROVISIONER_IMAGE="k8s.gcr.io/sig-storage/csi-provisioner:v2.0.0" (default)
+2021-02-08 21:30:01.403280 I | op-k8sutil: ROOK_CSI_ATTACHER_IMAGE="k8s.gcr.io/sig-storage/csi-attacher:v3.0.0" (default)
+2021-02-08 21:30:01.406314 I | op-k8sutil: ROOK_CSI_SNAPSHOTTER_IMAGE="k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.0" (default)
+2021-02-08 21:30:01.411408 I | op-k8sutil: ROOK_CSI_KUBELET_DIR_PATH="/var/lib/kubelet" (default)
+2021-02-08 21:30:01.577874 I | op-k8sutil: ROOK_CSI_CEPHFS_POD_LABELS="" (default)
+2021-02-08 21:30:01.777938 I | op-k8sutil: ROOK_CSI_RBD_POD_LABELS="" (default)
+2021-02-08 21:30:02.179582 I | ceph-csi: successfully created csi config map "rook-ceph-csi-config"
+2021-02-08 21:30:02.179660 I | ceph-csi: detecting the ceph csi image version for image "quay.io/cephcsi/cephcsi:v3.2.0"
+2021-02-08 21:30:02.379216 I | ceph-cluster-controller: clusterInfo not yet found, must be a new cluster
+2021-02-08 21:30:02.585152 I | op-k8sutil: CSI_PROVISIONER_TOLERATIONS="" (default)
+2021-02-08 21:30:02.786778 I | ceph-cluster-controller: detecting the ceph image version for image ceph/ceph:v15.2.8...
+2021-02-08 21:30:06.233070 I | ceph-csi: Detected ceph CSI image version: "v3.2.0"
+2021-02-08 21:30:06.236030 I | op-k8sutil: CSI_FORCE_CEPHFS_KERNEL_CLIENT="true" (configmap)
+2021-02-08 21:30:06.242938 I | op-k8sutil: CSI_CEPHFS_GRPC_METRICS_PORT="9091" (default)
+2021-02-08 21:30:06.248439 I | op-k8sutil: CSI_CEPHFS_LIVENESS_METRICS_PORT="9081" (default)
+2021-02-08 21:30:06.252031 I | op-k8sutil: CSI_RBD_GRPC_METRICS_PORT="9090" (default)
+2021-02-08 21:30:06.255007 I | op-k8sutil: CSI_RBD_LIVENESS_METRICS_PORT="9080" (default)
+2021-02-08 21:30:06.261201 I | op-k8sutil: CSI_PLUGIN_PRIORITY_CLASSNAME="" (default)
+2021-02-08 21:30:06.263818 I | op-k8sutil: CSI_PROVISIONER_PRIORITY_CLASSNAME="" (default)
+2021-02-08 21:30:06.266920 I | op-k8sutil: CSI_ENABLE_OMAP_GENERATOR="false" (default)
+2021-02-08 21:30:06.413645 I | op-k8sutil: CSI_ENABLE_RBD_SNAPSHOTTER="true" (default)
+2021-02-08 21:30:06.814816 I | op-k8sutil: CSI_ENABLE_CEPHFS_SNAPSHOTTER="true" (default)
+2021-02-08 21:30:07.022047 I | ceph-cluster-controller: detected ceph image version: "15.2.8-0 octopus"
+2021-02-08 21:30:07.022076 I | ceph-cluster-controller: validating ceph version from provided image
+2021-02-08 21:30:07.215051 I | op-k8sutil: CSI_CEPHFS_PLUGIN_UPDATE_STRATEGY="RollingUpdate" (default)
+2021-02-08 21:30:07.413494 I | ceph-cluster-controller: cluster "rook-ceph": version "15.2.8-0 octopus" detected for image "ceph/ceph:v15.2.8"
+2021-02-08 21:30:07.613720 I | op-k8sutil: CSI_RBD_PLUGIN_UPDATE_STRATEGY="RollingUpdate" (default)
+2021-02-08 21:30:07.613739 I | ceph-csi: Kubernetes version is 1.18+
+2021-02-08 21:30:07.844418 I | op-mon: start running mons
+2021-02-08 21:30:08.016827 I | op-k8sutil: ROOK_CSI_RESIZER_IMAGE="k8s.gcr.io/sig-storage/csi-resizer:v1.0.0" (default)
+2021-02-08 21:30:08.262064 I | op-mon: creating mon secrets for a new cluster
+2021-02-08 21:30:08.413716 I | op-k8sutil: CSI_LOG_LEVEL="" (default)
+2021-02-08 21:30:08.820765 I | ceph-csi: successfully started CSI Ceph RBD
+2021-02-08 21:30:08.822901 I | ceph-csi: successfully started CSI CephFS driver
+2021-02-08 21:30:09.214834 I | op-k8sutil: CSI_PROVISIONER_TOLERATIONS="" (default)
+2021-02-08 21:30:09.415563 I | op-mon: existing maxMonID not found or failed to load. configmaps "rook-ceph-mon-endpoints" not found
+2021-02-08 21:30:09.615037 I | op-k8sutil: CSI_PROVISIONER_NODE_AFFINITY="" (default)
+2021-02-08 21:30:09.817932 I | op-mon: saved mon endpoints to config map map[csi-cluster-config-json:[{"clusterID":"rook-ceph","monitors":[]}] data: mapping:{"node":{}} maxMonId:-1]
+2021-02-08 21:30:10.015206 I | op-k8sutil: CSI_PLUGIN_TOLERATIONS="" (default)
+2021-02-08 21:30:10.415085 I | op-k8sutil: CSI_PLUGIN_NODE_AFFINITY="" (default)
+2021-02-08 21:30:10.815711 I | op-k8sutil: CSI_RBD_PLUGIN_RESOURCE="" (default)
+2021-02-08 21:30:11.213581 I | op-k8sutil: CSI_RBD_PROVISIONER_RESOURCE="" (default)
+2021-02-08 21:30:11.415452 I | cephclient: writing config file /var/lib/rook/rook-ceph/rook-ceph.config
+2021-02-08 21:30:11.415612 I | cephclient: generated admin config in /var/lib/rook/rook-ceph
+2021-02-08 21:30:12.016167 I | op-k8sutil: CSI_CEPHFS_PLUGIN_RESOURCE="" (default)
+2021-02-08 21:30:12.415847 I | op-k8sutil: CSI_CEPHFS_PROVISIONER_RESOURCE="" (default)
+2021-02-08 21:30:13.216448 I | op-k8sutil: CSI_RBD_FSGROUPPOLICY="ReadWriteOnceWithFSType" (default)
+2021-02-08 21:30:13.236718 I | ceph-csi: CSIDriver object updated for driver "rook-ceph.rbd.csi.ceph.com"
+2021-02-08 21:30:13.614178 I | op-k8sutil: CSI_CEPHFS_FSGROUPPOLICY="ReadWriteOnceWithFSType" (default)
+2021-02-08 21:30:13.623018 I | ceph-csi: CSIDriver object updated for driver "rook-ceph.cephfs.csi.ceph.com"
+2021-02-08 21:30:13.821061 I | op-mon: targeting the mon count 3
+2021-02-08 21:30:14.022315 I | op-mon: sched-mon: created canary monitor rook-ceph-mon-a-canary pvc rook-ceph-mon-a
+2021-02-08 21:30:14.036978 I | op-mon: sched-mon: created canary deployment rook-ceph-mon-a-canary
+2021-02-08 21:30:14.218477 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:30:14.418190 I | op-mon: sched-mon: created canary monitor rook-ceph-mon-b-canary pvc rook-ceph-mon-b
+2021-02-08 21:30:14.427308 I | op-mon: sched-mon: created canary deployment rook-ceph-mon-b-canary
+2021-02-08 21:30:14.620675 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:30:14.822550 I | op-mon: sched-mon: created canary monitor rook-ceph-mon-c-canary pvc rook-ceph-mon-c
+2021-02-08 21:30:14.834397 I | op-mon: sched-mon: created canary deployment rook-ceph-mon-c-canary
+2021-02-08 21:30:15.021380 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:30:19.225316 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:30:19.625353 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:30:20.026278 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:30:24.229396 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:30:24.630195 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:30:25.032398 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:30:29.233083 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:30:29.634950 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:30:30.036819 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:30:34.238400 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:30:34.638695 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:30:35.041189 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:30:39.244637 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:30:39.642495 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:30:40.047597 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:30:44.248844 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:30:44.653985 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:30:45.051424 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:30:49.252820 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:30:49.658701 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:30:50.055684 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:30:54.257251 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:30:54.662717 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:30:55.061739 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:30:59.262937 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:30:59.666870 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:31:00.065624 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:31:04.268347 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
+2021-02-08 21:31:04.671165 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-b-canary
+2021-02-08 21:31:05.070416 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-c-canary
+2021-02-08 21:31:09.273214 I | op-mon: sched-mon: waiting for canary pod creation rook-ceph-mon-a-canary
