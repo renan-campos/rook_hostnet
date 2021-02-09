@@ -9,7 +9,7 @@ Ceph mon v2: 3300
 Ceph osd: 6800-7300
 
 # Deploys everything needed for the Rook operator to run properly.
-oc create -f common.yaml -f crds.yaml -f operator.yaml 
+oc create -f common.yaml -f crds.yaml -f openshift-operator.yaml 
 
 # Defines the Ceph cluster with host networking enabled,
 # and the configmap that defines the network configuration.
