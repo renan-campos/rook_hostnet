@@ -4,8 +4,8 @@ host network configuration using Rook.
 If running on AWS, the security groups need to be modified to allow traffic
 from the Ceph ports to travel on the host network. 
 From the AWS console, modify the worker-sg to allow TCP traffic from ports:
-Ceph mon v1: 3300
-Ceph mon v2: 6789
+Ceph mon v1: 6789
+Ceph mon v2: 3300
 Ceph osd: 6800-7300
 
 # Deploys everything needed for the Rook operator to run properly.
